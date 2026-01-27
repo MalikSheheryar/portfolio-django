@@ -33,7 +33,7 @@ export function Hero() {
           scale: 1,
           duration: 1,
           ease: 'cubic.out',
-        }
+        },
       )
 
       tl.fromTo(
@@ -48,7 +48,7 @@ export function Hero() {
           duration: 0.8,
           ease: 'power2.out',
         },
-        '-=0.6'
+        '-=0.6',
       )
 
       // Image parallax and scale on enter
@@ -67,7 +67,7 @@ export function Hero() {
             duration: 1,
             ease: 'back.out',
           },
-          '-=0.6'
+          '-=0.6',
         )
 
         // Floating animation for image
@@ -96,7 +96,7 @@ export function Hero() {
             stagger: 0.15,
             ease: 'power2.out',
           },
-          '-=0.4'
+          '-=0.4',
         )
       }
 
@@ -114,7 +114,8 @@ export function Hero() {
       })
 
       // Scroll indicator
-      const scrollIndicator = containerRef.current?.querySelector('.scroll-indicator')
+      const scrollIndicator =
+        containerRef.current?.querySelector('.scroll-indicator')
       if (scrollIndicator) {
         gsap.to(scrollIndicator, {
           y: 12,
@@ -132,7 +133,7 @@ export function Hero() {
   return (
     <section
       ref={containerRef}
-      className="min-h-screen relative overflow-hidden pt-32 pb-20 flex items-center justify-center"
+      className="min-h-screen relative overflow-hidden pt-32  flex items-center justify-center"
       id="hero"
     >
       {/* Premium gradient background */}
@@ -144,19 +145,29 @@ export function Hero() {
 
       {/* Grid background pattern */}
       <div className="absolute inset-0 -z-5 opacity-5">
-        <div className="absolute inset-0 bg-grid" style={{
-          backgroundImage: 'linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)',
-          backgroundSize: '50px 50px'
-        }} />
+        <div
+          className="absolute inset-0 bg-grid"
+          style={{
+            backgroundImage:
+              'linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)',
+            backgroundSize: '50px 50px',
+          }}
+        />
       </div>
 
       {/* Floating decorative elements */}
-      <div className="absolute top-20 right-10 w-16 h-16 rounded-lg border border-primary/20 backdrop-blur-sm"
-        ref={(el) => el && floatingElementsRef.current.push(el)} />
-      <div className="absolute top-1/3 left-10 w-12 h-12 rounded-full border border-accent/20 backdrop-blur-sm"
-        ref={(el) => el && floatingElementsRef.current.push(el)} />
-      <div className="absolute bottom-1/4 right-1/4 w-14 h-14 rounded-lg border border-primary/15 backdrop-blur-sm"
-        ref={(el) => el && floatingElementsRef.current.push(el)} />
+      <div
+        className="absolute top-20 right-10 w-16 h-16 rounded-lg border border-primary/20 backdrop-blur-sm"
+        ref={(el) => el && floatingElementsRef.current.push(el)}
+      />
+      <div
+        className="absolute top-1/3 left-10 w-12 h-12 rounded-full border border-accent/20 backdrop-blur-sm"
+        ref={(el) => el && floatingElementsRef.current.push(el)}
+      />
+      <div
+        className="absolute bottom-1/4 right-1/4 w-14 h-14 rounded-lg border border-primary/15 backdrop-blur-sm"
+        ref={(el) => el && floatingElementsRef.current.push(el)}
+      />
 
       {/* Main content grid */}
       <div className="max-w-7xl mx-auto px-6 z-10 w-full grid lg:grid-cols-2 gap-12 items-center">
@@ -164,7 +175,9 @@ export function Hero() {
         <div className="space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm w-fit">
             <Sparkles size={16} className="text-primary" />
-            <span className="text-sm font-medium text-primary">Full-Stack Developer & Designer</span>
+            <span className="text-sm font-medium text-primary">
+              Full-Stack Developer & Designer
+            </span>
           </div>
 
           <h1
@@ -181,7 +194,9 @@ export function Hero() {
             ref={subtitleRef}
             className="text-lg text-muted-foreground leading-relaxed max-w-xl text-balance"
           >
-            I craft beautiful, high-performance web applications using modern technologies. Combining stunning design with powerful functionality to create unforgettable user experiences.
+            I craft beautiful, high-performance web applications using modern
+            technologies. Combining stunning design with powerful functionality
+            to create unforgettable user experiences.
           </p>
 
           {/* CTA Buttons */}
@@ -207,18 +222,27 @@ export function Hero() {
           </div>
 
           {/* Stats section */}
-          <div ref={statsRef} className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
+          <div
+            ref={statsRef}
+            className="grid grid-cols-3 gap-6 pt-8 border-t border-border"
+          >
             <div className="stat-item">
               <div className="text-3xl font-bold text-primary">50+</div>
-              <div className="text-sm text-muted-foreground">Projects Completed</div>
+              <div className="text-sm text-muted-foreground">
+                Projects Completed
+              </div>
             </div>
             <div className="stat-item">
-              <div className="text-3xl font-bold text-primary">5+</div>
-              <div className="text-sm text-muted-foreground">Years Experience</div>
+              <div className="text-3xl font-bold text-primary">2+</div>
+              <div className="text-sm text-muted-foreground">
+                Years Experience
+              </div>
             </div>
             <div className="stat-item">
               <div className="text-3xl font-bold text-primary">100%</div>
-              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+              <div className="text-sm text-muted-foreground">
+                Client Satisfaction
+              </div>
             </div>
           </div>
         </div>
@@ -248,28 +272,7 @@ export function Hero() {
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-accent/20 to-transparent rounded-tr-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
-
-          {/* Floating badge */}
-          <div className="absolute bottom-10 left-0 px-6 py-4 bg-card border border-border rounded-xl shadow-xl backdrop-blur-sm">
-            <div className="flex items-center gap-3">
-              <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full bg-primary/20 border-2 border-card flex items-center justify-center text-xs font-bold">
-                  <Globe size={14} />
-                </div>
-              </div>
-              <div>
-                <div className="text-sm font-semibold">Web Dev Stack</div>
-                <div className="text-xs text-muted-foreground">Next.js • React • TypeScript</div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator flex flex-col items-center gap-2">
-        <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold">Scroll to explore</span>
-        <ArrowDown size={20} className="text-primary" />
       </div>
     </section>
   )

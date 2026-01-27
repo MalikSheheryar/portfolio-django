@@ -10,8 +10,8 @@ gsap.registerPlugin(ScrollTrigger)
 const educationData = [
   {
     degree: 'Bachelor of Science in Computer Science',
-    institution: 'University of Technology',
-    year: '2020 - 2024',
+    institution: 'University of Management andTechnology',
+    year: '2024 - 2028',
     description: 'Focus on software engineering and web development',
     gpa: '3.8/4.0',
   },
@@ -19,15 +19,9 @@ const educationData = [
     degree: 'Full-Stack Web Development Bootcamp',
     institution: 'Tech Academy',
     year: '2020',
-    description: 'Intensive training in MERN stack and modern development practices',
+    description:
+      'Intensive training in MERN stack and modern development practices',
     gpa: 'Graduated with Distinction',
-  },
-  {
-    degree: 'Advanced JavaScript & React Certification',
-    institution: 'Online Learning Platform',
-    year: '2021',
-    description: 'Advanced concepts in JavaScript, React, and performance optimization',
-    gpa: 'Certified',
   },
 ]
 
@@ -55,7 +49,7 @@ export function Education() {
               trigger: item,
               start: 'top 80%',
             },
-          }
+          },
         )
       })
     }, containerRef)
@@ -64,7 +58,11 @@ export function Education() {
   }, [])
 
   return (
-    <section ref={containerRef} id="education" className="py-20 px-6 bg-secondary/30">
+    <section
+      ref={containerRef}
+      id="education"
+      className="py-20 px-6 bg-secondary/30"
+    >
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
           Education
@@ -89,14 +87,20 @@ export function Education() {
 
                 <div className="flex-1">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-                    <h3 className="text-xl font-bold text-foreground">{edu.degree}</h3>
+                    <h3 className="text-xl font-bold text-foreground">
+                      {edu.degree}
+                    </h3>
                     <span className="text-sm text-primary font-semibold bg-primary/10 px-3 py-1 rounded-full w-fit">
                       {edu.year}
                     </span>
                   </div>
 
-                  <p className="text-primary font-semibold mb-2">{edu.institution}</p>
-                  <p className="text-muted-foreground mb-3">{edu.description}</p>
+                  <p className="text-primary font-semibold mb-2">
+                    {edu.institution}
+                  </p>
+                  <p className="text-muted-foreground mb-3">
+                    {edu.description}
+                  </p>
 
                   <div className="flex gap-4 text-sm">
                     <span className="bg-accent/10 text-accent px-3 py-1 rounded-lg font-semibold">

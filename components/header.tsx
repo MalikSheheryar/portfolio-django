@@ -15,7 +15,7 @@ export function Header() {
 
     // Smooth scroll indicator animation
     const navLinks = document.querySelectorAll('a[href^="#"]')
-    navLinks.forEach(link => {
+    navLinks.forEach((link) => {
       link.addEventListener('click', () => {
         const href = link.getAttribute('href')
         setActiveLink(href || '')
@@ -34,7 +34,7 @@ export function Header() {
             <Code2 size={20} className="text-white" />
           </div>
           <span className="font-bold text-lg bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Portfolio
+            Subhan Waseem
           </span>
         </div>
 
